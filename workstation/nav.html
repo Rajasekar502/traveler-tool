@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="nav.css">
+    <script>
+        function setNavLinks() {
+            const navLinks = document.querySelectorAll('.nav-list a');
+            const pages = [
+                'dashboard.html', // Home
+                'time_speed_distance_calculator.html', // Calculator
+                'finance.html', // Finance (assuming this file; replace if incorrect)
+                'fuel_price.html', // Fuel Price
+                'compare_vehicles.html', // Vehicle Comparison
+                'login_index.html' // Log In (assuming this file; replace if incorrect)
+            ];
+
+            navLinks.forEach((link, index) => {
+                if (pages[index]) {
+                    link.href = pages[index];
+                }
+            });
+        }
+
+        window.onload = setNavLinks;
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">Calculator</a></li>
+            <li><a href="">Vehicle EMI</a></li>
+            <li><a href="">Fuel Price</a></li>
+            <li><a href="">Vehicle Comparison</a></li>
+            <li><input type="text" placeholder="Search..."></li>
+            <li><a href="">Log In</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- Your content goes here -->
+    </div>
+</body>
+</html>

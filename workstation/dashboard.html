@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Analyst Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <script>
+        function setNavLinks() {
+            const navLinks = document.querySelectorAll('.nav-list a');
+            const pages = [
+                'dashboard.html', // Home
+                'time_speed_distance_calculator.html', // Calculator
+                'mileage_calculator.html', // Mileage
+                'vehicle_emi_calculator.html', // Vehicle EMI
+                'fuel_price.html', // Fuel Price
+                'compare_vehicles.html', // Vehicle Comparison
+                'login_index.html' // Log In
+            ];
+
+            navLinks.forEach((link, index) => {
+                if (pages[index]) {
+                    link.href = pages[index];
+                }
+            });
+        }
+
+        window.onload = setNavLinks;
+    </script>
+
+    <style>
+        /* Your navbar style */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-list li {
+            margin: 0 10px;
+        }
+
+        .nav-list li a, .nav-list li input {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .nav-list li a.active {
+            background-color: #555;
+            border-radius: 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 100px auto; /* Adjust as needed */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+            padding-bottom:55px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #666;
+        }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Your footer style */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer div {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="dashboard.html" class="active">Home</a></li>
+            <li><a href="time_speed_distance_calculator.html">Calculator</a></li>
+            <li><a href="mileage_calculator.html">Mileage</a></li>
+            <li><a href="vehicle_emi_calculator.html">Vehicle EMI</a></li>
+            <li><a href="fuel_price.html">Fuel Price</a></li>
+            <li><a href="compare_vehicles.html">Vehicle Comparison</a></li>
+            <li><input type="text" placeholder="Search..."></li>
+            <li><a href="login_index.html">Log In</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">Mileage Calculator</h5>
+            <p class="card-text">Calculate the mileage of your vehicle.</p>
+            <a href="mileage_calculator.html" class="card-link">Open Mileage Calculator</a>
+        </div>
+        <div class="card">
+            <h5 class="card-title">Time Speed and Distance Calculator</h5>
+            <p class="card-text">Calculate time, speed, and distance.</p>
+            <a href="time_speed_distance_calculator.html" class="card-link">Open Time Speed and Distance Calculator</a>
+        </div>
+        <div class="card">
+            <h5 class="card-title">Vehicle EMI Calculator</h5>
+            <p class="card-text">Calculate EMI for vehicle loans.</p>
+            <a href="vehicle_emi_calculator.html" class="card-link">Open Vehicle EMI Calculator</a>
+        </div>
+        <div class="card">
+            <h5 class="card-title">Current Fuel Price in Your Country</h5>
+            <p class="card-text">Check the current fuel price in your country.</p>
+            <a href="fuel_price.html" class="card-link">Open Fuel Price Calculator</a>
+        </div>
+        <div class="card">
+            <h5 class="card-title">Compare Vehicles</h5>
+            <p class="card-text">Compare different vehicles.</p>
+            <a href="compare_vehicles.html" class="card-link">Open Vehicle Comparison</a>
+        </div>
+    </div>
+
+    <!-- Your footer here -->
+    <div class="footer">
+        <div>
+            <a href="#">Calculator</a>
+            <a href="#">Speed and Time</a>
+            <a href="#">Vehicle EMI</a>
+            <a href="#">Fuel Price</a>
+            <a href="#">Vehicle Comparison</a>
+        </div>
+        <div>© 2024 Traveler Tool. All rights reserved.</div>
+    </div>
+
+</body>
+</html>

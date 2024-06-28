@@ -1,0 +1,12 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #007bff;
+}
+
+#result p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}

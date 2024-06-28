@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Four-Wheelers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        .lead {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+        .comparison-section {
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+        .comparison-section h5 {
+            margin-bottom: 20px;
+        }
+        .compare-box {
+            margin-bottom: 20px;
+        }
+        .card-img-top {
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Compare Four-Wheelers</h1>
+        <div class="comparison-section">
+            <h5 class="text-center">Planning to buy a new car but confused about how to evaluate between different models?</h5>
+            <div class="row">
+                <div class="col-md-4 compare-box">
+                    <select class="form-control mb-2">
+                        <option>Select Model</option>
+                        <!-- Add more model options here -->
+                    </select>
+                    <select class="form-control">
+                        <option>Select Variant</option>
+                        <!-- Add more variant options here -->
+                    </select>
+                </div>
+                <div class="col-md-4 compare-box">
+                    <select class="form-control mb-2">
+                        <option>Select Model</option>
+                        <!-- Add more model options here -->
+                    </select>
+                    <select class="form-control">
+                        <option>Select Variant</option>
+                        <!-- Add more variant options here -->
+                    </select>
+                </div>
+                <div class="col-md-4 compare-box">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+                        <button class="btn btn-outline-primary">Add Car 3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary">Compare</button>
+            </div>
+        </div>
+        <div class="popular-comparisons mt-4">
+            <h5 class="text-center">Popular Car Comparisons</h5>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Model 1">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Hyundai Venue vs Tata Nexon</h6>
+                            <p class="card-text">₹7.94 - ₹13.48 Lakh</p>
+                            <a href="#" class="btn btn-outline-primary">Compare</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Model 2">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Maruti Suzuki Ertiga vs Kia Carens</h6>
+                            <p class="card-text">₹8.69 - ₹13.08 Lakh</p>
+                            <a href="#" class="btn btn-outline-primary">Compare</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Model 3">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Honda Elevate vs Hyundai Creta</h6>
+                            <p class="card-text">₹11.69 - ₹20.15 Lakh</p>
+                            <a href="#" class="btn btn-outline-primary">Compare</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more comparison cards as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript and Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer div {
+            margin: 10px 0;
+        }
+        @media (max-width: 600px) {
+            .footer {
+                padding: 10px 0;
+            }
+            .footer div {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Your content here -->
+
+    <div class="footer">
+        <div>
+            <a href="#">Calculator</a>
+            <a href="#">Speed and Time</a>
+            <a href="#">Vehicle EMI</a>
+            <a href="#">Fuel Price</a>
+            <a href="#">Vehicle Comparison</a>
+        </div>
+        <div>© 2024 Traveler Tool. All rights reserved.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Fuel Price</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <script>
+        function setNavLinks() {
+            const navLinks = document.querySelectorAll('.nav-list a');
+            const pages = [
+                'dashboard.html', // Home
+                'mileage_calculator.html',//mileage
+                'time_speed_distance_calculator.html', // Calculator
+                'vehicle_emi_calculator.html', // Vehicle EMI
+                'fuel_price.html', // Fuel Price
+                'compare_vehicles.html', // Vehicle Comparison
+                'login_index.html' // Log In
+            ];
+
+            navLinks.forEach((link, index) => {
+                if (pages[index]) {
+                    link.href = pages[index];
+                }
+            });
+        }
+
+        window.onload = setNavLinks;
+
+
+        $(document).ready(function() {
+            $('#locationForm').submit(function(event) {
+                event.preventDefault();
+                var location = $('#locationInput').val().trim();
+                var fuelType = $('input[name=fuelType]:checked').val();
+
+                if (location !== '') {
+                    // Simulating fetching current fuel price based on location and fuel type
+                    var currentFuelPrice;
+                    if (fuelType === 'petrol') {
+                        currentFuelPrice = 95.75; // Example price for petrol in INR
+                    } else if (fuelType === 'diesel') {
+                        currentFuelPrice = 85.25; // Example price for diesel in INR
+                    }
+
+                    // Display the current fuel price
+                    var fuelPriceResult = $('#fuelPriceResult');
+                    fuelPriceResult.html('<p class="lead">Current ' + fuelType + ' price in ' + location + ': ₹' + currentFuelPrice.toFixed(2) + '</p>');
+                } else {
+                    alert('Please enter a valid location.');
+                }
+            });
+        });
+
+
+    </script>
+
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        .lead {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">Calculator</a></li>
+            <li><a href="">speed and time</a></li>
+           
+            <li><a href="">Vehicle EMI</a></li>
+            <li><a href="">Fuel Price</a></li>
+            <li><a href="">Vehicle Comparison</a></li>
+            <li><input type="text" placeholder="Search..."></li>
+            <li><a href="">Log In</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+        <h1 class="text-center">Current Fuel Price</h1>
+        <form id="locationForm">
+            <div class="form-group">
+                <label for="locationInput">Enter Your Location:</label>
+                <input type="text" class="form-control" id="locationInput" placeholder="City, Country">
+            </div>
+            <div class="form-group">
+                <label>Fuel Type:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fuelType" id="petrolRadio" value="petrol" checked>
+                    <label class="form-check-label" for="petrolRadio">Petrol</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fuelType" id="dieselRadio" value="diesel">
+                    <label class="form-check-label" for="dieselRadio">Diesel</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Get Fuel Price</button>
+        </form>
+        <div id="fuelPriceResult" class="mt-4">
+            <!-- This div will be populated with the fuel price -->
+        </div>
+    </div>
+
+    <!-- JavaScript and Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer div {
+            margin: 10px 0;
+        }
+        @media (max-width: 600px) {
+            .footer {
+                padding: 10px 0;
+            }
+            .footer div {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Your content here -->
+
+   
+        
+    
+</body>
+</html>
